@@ -20,7 +20,7 @@ const spriteHeight = 523;
 // let frameX = 0;
 // let frameY = 1;
 let gameFrame = 0;
-const staggerFrames = 7;
+const staggerFrames = 5;
 spriteAnimations = [];
 const animationStates = [
   { name: "idle", frames: 7 },
