@@ -12,19 +12,20 @@ class Enemy {
   constructor() {
     this.image = new Image();
     this.image.src = "./enemies/enemy1.png";
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
     // this.speed = Math.random() * 4 - 2;
     this.spriteWidth = 293;
     this.spritHeight = 155;
     this.width = this.spriteWidth / 2.5;
     this.height = this.spritHeight / 2.5;
+    this.x = Math.random() * (canvas.width - this.width);
+    this.y = Math.random() * (canvas.height - this.height);
+
     this.frame = 0;
     this.flapSpeed = Math.floor(Math.random() * 3 + 1);
   }
   update() {
-    this.x += Math.random() * 3 - 1.5;
-    this.y += Math.random() * 3 - 1.5;
+    this.x += Math.random() * 12 - 6;
+    this.y += Math.random() * 5 - 2.5;
     //animate sprites
     if (gameFrame % this.flapSpeed === 0) {
       this.frame > 4 ? (this.frame = 0) : this.frame++;
